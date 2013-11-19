@@ -11,4 +11,3 @@ golo-code-elevator-ng
 ##Run project
 
     java -jar gce.00.jar
-    
