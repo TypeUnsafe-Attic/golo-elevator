@@ -2,15 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <modelVersion>4.0.0</modelVersion>
-    <groupId>golo-code-elevator-ng</groupId>
-    <artifactId>golo-code-elevator-ng</artifactId>
-    <version>00</version>
+
+    <groupId>org.typeunsafe</groupId>
+    <artifactId>code-elevator</artifactId>
+   <version>0.1-SNAPSHOT</version>
 
     <packaging>jar</packaging>
 
-    <name>golo-code-elevator-ng</name>
+    <name>Code Elevator</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,6 +18,7 @@
     </properties>
 
     <build>
+        <!--
         <sourceDirectory>src</sourceDirectory>
 
         <resources>
@@ -28,7 +29,7 @@
                 </excludes>
             </resource>
         </resources>
-
+        -->
         <plugins>
 
             <plugin>
@@ -49,14 +50,15 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+                    <!--
                     <archive>
                         <manifest>
                             <mainClass>Main</mainClass>
                         </manifest>
                     </archive>
+                    -->
                     <appendAssemblyId>false</appendAssemblyId>
-                    <outputDirectory>./</outputDirectory>
-                    <finalName>gce.${project.version}</finalName>
+                    <outputDirectory>jars</outputDirectory>
                 </configuration>
             </plugin>
 
@@ -66,12 +68,6 @@
 
 
     <dependencies>
-
-        <dependency>
-            <groupId>org.golo-lang</groupId>
-            <artifactId>golo</artifactId>
-            <version>0-preview9</version>
-        </dependency>
 
         <dependency>
             <groupId>com.sparkjava</groupId>
@@ -85,7 +81,25 @@
             <version>2.2.0</version>
         </dependency>
 
+        <!--
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.1.0</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        -->
 
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>2.11.3</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+
+        
     </dependencies>
-
+    
 </project>
