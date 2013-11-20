@@ -6,7 +6,7 @@ function main = |args| {
   let app = Application()
 
   app: staticFileLocation(java.io.File( "." ): getCanonicalPath() + "/app/public")
-  app: port(9090)
+  app: port(80)
 
   let elevator = Elevator()
 
