@@ -11,7 +11,6 @@
     <name>golo-elevator</name>
 
     <properties>
-        <golo.main.module>elevator.Main</golo.main.module>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jetty.version>9.0.2.v20130417</jetty.version>
         <golo.version>0-preview9</golo.version>
@@ -78,9 +77,6 @@
                 </executions>
                 <configuration>
                     <mainClass>GoloBootstrap</mainClass>
-                    <arguments>
-                        <argument>${golo.main.module}</argument>
-                    </arguments>
                 </configuration>
             </plugin>
             <plugin>
@@ -90,7 +86,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>Main</mainClass>
+                            <mainClass>GoloBootstrap</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

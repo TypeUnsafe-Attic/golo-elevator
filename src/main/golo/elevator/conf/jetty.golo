@@ -1,5 +1,6 @@
 module elevator.conf.jetty
 
+import java.lang.System
 import spark.Spark
 
 struct JettyStruct = { port, staticFileLocation }
@@ -18,7 +19,8 @@ function Jetty = | jettyConf | {
 
 augment elevator.conf.jetty.types.JettyStruct {
  function init = |this| {
-   setPort(this: port())
+   let port = System.getProperty("app.port")?: toInteger() orIfNull this: port()
+   setPort(port)
    staticFileLocation(this: staticFileLocation())
  }
 }
