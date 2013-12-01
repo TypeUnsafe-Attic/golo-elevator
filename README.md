@@ -1,13 +1,20 @@
-golo-code-elevator-ng
+golo-elevator
 =====================
 
 
 ##Compile project (single jar)
-
-    mvn compile assembly:single
-
-**Remark:** golo application files and static assets aren't embedded in the jar file
+It will produce a ```jar-with-dependencies.jar``` standalone artifact.
+    mvn package
 
 ##Run project
 
-    java -jar gce.00.jar
+    mvn exec:java
+
+##Configurtation
+By default the server listens on 9090, you can overwrite usin the ```app.port``` system property.
+
+    mvn exec:java -Dapp.port=8080
+
+##Cloudbees
+The showcase is proudly hosted on [CloudBees](http://www.cloudbees.com/)
+### [http://golo-elevator.typeunsafe.cloudbees.net/](http://golo-elevator.typeunsafe.cloudbees.net/)
