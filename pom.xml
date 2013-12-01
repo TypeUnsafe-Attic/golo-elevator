@@ -11,7 +11,6 @@
     <name>golo-elevator</name>
 
     <properties>
-        <golo.main.module>elevator.Main</golo.main.module>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jetty.version>9.0.2.v20130417</jetty.version>
         <golo.version>0-preview9</golo.version>
@@ -78,9 +77,6 @@
                 </executions>
                 <configuration>
                     <mainClass>GoloBootstrap</mainClass>
-                    <arguments>
-                        <argument>${golo.main.module}</argument>
-                    </arguments>
                 </configuration>
             </plugin>
             <plugin>
@@ -107,25 +103,6 @@
                     </execution>
                 </executions>
             </plugin>
-			<plugin>
-       <groupId>com.cloudbees</groupId>
-       <artifactId>bees-maven-plugin</artifactId>
-       <version>1.3.2</version>
-     </plugin>
         </plugins>
     </build>
-	
-	 <pluginRepositories>
-   <pluginRepository>
-     <id>cloudbees-public-release</id>
-     <url>http://repository-cloudbees.forge.cloudbees.com/public-release</url>
-     <releases>
-       <enabled>true</enabled>
-     </releases> 
-     <snapshots>
-       <enabled>false</enabled>
-     </snapshots>
-    </pluginRepository>
- </pluginRepositories>
- 
 </project>
