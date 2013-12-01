@@ -4,6 +4,7 @@ golo-elevator
 
 ##Compile project (single jar)
 It will produce a ```jar-with-dependencies.jar``` standalone artifact.
+
     mvn package
 
 ##Run project
